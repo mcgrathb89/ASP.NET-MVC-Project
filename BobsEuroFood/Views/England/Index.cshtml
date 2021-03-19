@@ -1,0 +1,64 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "England";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center"><strong>Welcome to England</strong></h1>
+<br />
+
+<div class="text-left"><h2>Recipe Navigation</h2></div>
+<br />
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Countries", "CountriesList", "Countries")</li>
+    <li class="active">About English Food</li>
+    <li>@Html.ActionLink("English Starters", "EnglishStarters", "England")</li>
+    <li>@Html.ActionLink("English Mains", "EnglishMains", "England")</li>
+    <li>@Html.ActionLink("English Desserts", "EnglishDesserts", "England")</li>
+</ul>
+
+<div class="smaller-space"></div>
+
+<img class="img-responsive center-block" src="~/Images/England/Flag_of_England.webp" alt="English Flag" />
+
+<div class="smaller-space"></div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="text-left"><h1 class="panel-title lead">About English Cuisine</h1></div>
+    </div>
+    <div class="panel-body text-justify lead">
+
+    </div>
+</div>
+
+<div class="space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About English Starters</h2>
+    <br />
+    <p class="text-justify">
+
+    </p>
+</div>
+
+<div class="small-space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About English Mains</h2>
+    <br />
+    <p class="text-justify">
+
+    </p>
+</div>
+
+<div class="small-space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About English Desserts</h2>
+    <br />
+    <p class="text-justify">
+
+    </p>
+</div>

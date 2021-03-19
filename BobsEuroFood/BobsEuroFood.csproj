@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA940022-D027-4F8C-AC51-793C256BE211}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BobsEuroFood</RootNamespace>
+    <AssemblyName>BobsEuroFood</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44335</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NetCoreThumbor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetCoreThumbor.1.0.0\lib\netstandard2.0\NetCoreThumbor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AlbaniaController.cs" />
+    <Compile Include="Controllers\AndorraController.cs" />
+    <Compile Include="Controllers\ArmeniaController.cs" />
+    <Compile Include="Controllers\AustriaController.cs" />
+    <Compile Include="Controllers\AzerbaijanController.cs" />
+    <Compile Include="Controllers\BelarusController.cs" />
+    <Compile Include="Controllers\BelgiumController.cs" />
+    <Compile Include="Controllers\Bosnia_and_HerzegovinaController.cs" />
+    <Compile Include="Controllers\BulgariaController.cs" />
+    <Compile Include="Controllers\CountriesController.cs" />
+    <Compile Include="Controllers\CroatiaController.cs" />
+    <Compile Include="Controllers\CyprusController.cs" />
+    <Compile Include="Controllers\Czech_RepublicController.cs" />
+    <Compile Include="Controllers\DenmarkController.cs" />
+    <Compile Include="Controllers\EnglandController.cs" />
+    <Compile Include="Controllers\EstoniaController.cs" />
+    <Compile Include="Controllers\FinlandController.cs" />
+    <Compile Include="Controllers\FranceController.cs" />
+    <Compile Include="Controllers\GeorgiaController.cs" />
+    <Compile Include="Controllers\GermanyController.cs" />
+    <Compile Include="Controllers\GreeceController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HungaryController.cs" />
+    <Compile Include="Controllers\IcelandController.cs" />
+    <Compile Include="Controllers\IrelandController.cs" />
+    <Compile Include="Controllers\ItalyController.cs" />
+    <Compile Include="Controllers\KazakhstanController.cs" />
+    <Compile Include="Controllers\KosovoController.cs" />
+    <Compile Include="Controllers\LatviaController.cs" />
+    <Compile Include="Controllers\LiechtensteinController.cs" />
+    <Compile Include="Controllers\LithuaniaController.cs" />
+    <Compile Include="Controllers\LuxembourgController.cs" />
+    <Compile Include="Controllers\MaltaController.cs" />
+    <Compile Include="Controllers\MoldovaController.cs" />
+    <Compile Include="Controllers\MontenegroController.cs" />
+    <Compile Include="Controllers\NetherlandsController.cs" />
+    <Compile Include="Controllers\Northern_IrelandController.cs" />
+    <Compile Include="Controllers\North_MacedoniaController.cs" />
+    <Compile Include="Controllers\NorwayController.cs" />
+    <Compile Include="Controllers\PolandController.cs" />
+    <Compile Include="Controllers\PortugalController.cs" />
+    <Compile Include="Controllers\RomaniaController.cs" />
+    <Compile Include="Controllers\RussiaController.cs" />
+    <Compile Include="Controllers\San_MarinoController.cs" />
+    <Compile Include="Controllers\ScotlandController.cs" />
+    <Compile Include="Controllers\SerbiaController.cs" />
+    <Compile Include="Controllers\SlovakiaController.cs" />
+    <Compile Include="Controllers\SloveniaController.cs" />
+    <Compile Include="Controllers\SpainController.cs" />
+    <Compile Include="Controllers\SwedenController.cs" />
+    <Compile Include="Controllers\SwitzerlandController.cs" />
+    <Compile Include="Controllers\TurkeyController.cs" />
+    <Compile Include="Controllers\UkraineController.cs" />
+    <Compile Include="Controllers\WalesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\CountryViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-slate-min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Images\Albania\Starters\Chicken_Kebabs.webp" />
+    <Content Include="Images\Albania\Starters\Figs_and_Walnuts.webp" />
+    <Content Include="Images\Albania\Starters\Filo_Pie.webp" />
+    <Content Include="Images\Albania\Starters\Meatballs.webp" />
+    <Content Include="Images\Albania\Flag_of_Albania.webp" />
+    <Content Include="Images\Albania\Desserts\Sponge_Cake.webp" />
+    <Content Include="Images\Albania\Desserts\Pancakes.webp" />
+    <Content Include="Images\Albania\Desserts\Baklava.webp" />
+    <Content Include="Images\Albania\Desserts\Eclairs.webp" />
+    <Content Include="Images\Albania\Mains\Cheese_and_Vegetable_Stew_with_Peppers.webp" />
+    <Content Include="Images\Albania\Mains\Chicken_and_Rice.webp" />
+    <Content Include="Images\Albania\Mains\Chicken_With_Walnuts.webp" />
+    <Content Include="Images\Albania\Mains\Lamb_Stew.webp" />
+    <Content Include="Images\Armenia\Flag_of_Armenia.webp" />
+    <Content Include="Images\Austria\Flag_of_Austria.webp" />
+    <Content Include="Images\Azerbaijan\Flag_of_Azerbaijan.webp" />
+    <Content Include="Images\Belarus\Flag_of_Belarus.webp" />
+    <Content Include="Images\Belgium\Flag_of_Belgium.webp" />
+    <Content Include="Images\Bosnia and Herzegovina\Flag_of_Bosnia_and_Herzegovina.webp" />
+    <Content Include="Images\Bulgaria\Flag_of_Bulgaria.webp" />
+    <Content Include="Images\Croatia\Flag_of_Croatia.webp" />
+    <Content Include="Images\Cyprus\Flag_of_Cyprus.webp" />
+    <Content Include="Images\Czech Republic\Flag_of_Czech_Republic.webp" />
+    <Content Include="Images\Denmark\Flag_of_Denmark.webp" />
+    <Content Include="Images\England\Flag_of_England.webp" />
+    <Content Include="Images\Estonia\Flag_of_Estonia.webp" />
+    <Content Include="Images\Finland\Flag_of_Finland.webp" />
+    <Content Include="Images\France\Flag_of_France.webp" />
+    <Content Include="Images\Georgia\Flag_of_Georgia.webp" />
+    <Content Include="Images\Germany\Flag_of_Germany.webp" />
+    <Content Include="Images\Greece\Flag_of_Greece.webp" />
+    <Content Include="Images\Hungary\Flag_of_Hungary.webp" />
+    <Content Include="Images\Iceland\Flag_of_Iceland.webp" />
+    <Content Include="Images\Ireland\Flag_of_Ireland.webp" />
+    <Content Include="Images\Italy\Flag_of_Italy.webp" />
+    <Content Include="Images\Kazakhstan\Flag_of_Kazakhstan.webp" />
+    <Content Include="Images\Kosovo\Flag_of_Kosovo.webp" />
+    <Content Include="Images\Latvia\Flag_of_Latvia.webp" />
+    <Content Include="Images\Liechtenstein\Flag_of_Liechtenstein.webp" />
+    <Content Include="Images\Lithuania\Flag_of_Lithuania.webp" />
+    <Content Include="Images\Luxembourg\Flag_of_Luxembourg.webp" />
+    <Content Include="Images\Malta\Flag_of_Malta.webp" />
+    <Content Include="Images\Moldova\Flag_of_Moldova.webp" />
+    <Content Include="Images\Montenegro\Flag_of_Montenegro.webp" />
+    <Content Include="Images\Netherlands\Flag_of_Netherlands.webp" />
+    <Content Include="Images\North Macedonia\Flag_of_North_Macedonia.webp" />
+    <Content Include="Images\Northern Ireland\Flag_of_Northern_Ireland.webp" />
+    <Content Include="Images\Norway\Flag_of_Norway.webp" />
+    <Content Include="Images\Poland\Flag_of_Poland.webp" />
+    <Content Include="Images\Portugal\Flag_of_Portugal.webp" />
+    <Content Include="Images\Romania\Flag_of_Romania.webp" />
+    <Content Include="Images\Russia\Flag_of_Russia.webp" />
+    <Content Include="Images\San Marino\Flag_of_San_Marino.webp" />
+    <Content Include="Images\Scotland\Flag_of_Scotland.webp" />
+    <Content Include="Images\Serbia\Flag_of_Serbia.webp" />
+    <Content Include="Images\Slovakia\Flag_of_Slovakia.webp" />
+    <Content Include="Images\Slovenia\Flag_of_Slovenia.webp" />
+    <Content Include="Images\Spain\Flag_of_Spain.webp" />
+    <Content Include="Images\Sweden\Flag_of_Sweden.webp" />
+    <Content Include="Images\Switzerland\Flag_of_Switzerland.webp" />
+    <Content Include="Images\Turkey\Flag_of_Turkey.webp" />
+    <Content Include="Images\Ukraine\Flag_of_Ukraine.webp" />
+    <Content Include="Images\Wales\Flag_of_Wales.webp" />
+    <Content Include="Images\Flag_of_Europe.webp" />
+    <Content Include="Images\Andorra\Flag_of_Andorra.webp" />
+    <Content Include="Images\Placeholder.webp" />
+    <Content Include="Images\Andorra\Starters\Potato-and-Bacon-Hash.webp" />
+    <Content Include="Images\Andorra\Starters\Sausage-with-Eggs.webp" />
+    <Content Include="Images\Andorra\Starters\Spinach.webp" />
+    <Content Include="Images\Andorra\Starters\Stuffed-Mushrooms.webp" />
+    <Content Include="Images\Andorra\Mains\Beef-Stew.webp" />
+    <Content Include="Images\Andorra\Mains\Cannelloni.webp" />
+    <Content Include="Images\Andorra\Mains\Chicken-Stew.webp" />
+    <Content Include="Images\Andorra\Mains\Grilled-Fish.webp" />
+    <None Include="Scripts\jquery-3.5.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.5.1.js" />
+    <Content Include="Scripts\jquery-3.5.1.min.js" />
+    <Content Include="Scripts\jquery-3.5.1.slim.js" />
+    <Content Include="Scripts\jquery-3.5.1.slim.min.js" />
+    <Content Include="Style\recipes.css" />
+    <Content Include="Style\styles.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.5.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.5.1.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Shared\_Navbar.cshtml" />
+    <Content Include="Views\Countries\CountriesList.cshtml" />
+    <Content Include="Views\Spain\Index.cshtml" />
+    <Content Include="Views\Finland\Index.cshtml" />
+    <Content Include="Views\Greece\Index.cshtml" />
+    <Content Include="Views\Estonia\Index.cshtml" />
+    <Content Include="Views\Georgia\Index.cshtml" />
+    <Content Include="Views\Russia\Index.cshtml" />
+    <Content Include="Views\Ukraine\Index.cshtml" />
+    <Content Include="Views\France\Index.cshtml" />
+    <Content Include="Views\Sweden\Index.cshtml" />
+    <Content Include="Views\Norway\Index.cshtml" />
+    <Content Include="Views\Germany\Index.cshtml" />
+    <Content Include="Views\Poland\Index.cshtml" />
+    <Content Include="Views\Italy\Index.cshtml" />
+    <Content Include="Views\Ireland\Index.cshtml" />
+    <Content Include="Views\Romania\Index.cshtml" />
+    <Content Include="Views\Belarus\Index.cshtml" />
+    <Content Include="Views\Kazakhstan\Index.cshtml" />
+    <Content Include="Views\Bulgaria\Index.cshtml" />
+    <Content Include="Views\Iceland\Index.cshtml" />
+    <Content Include="Views\Hungary\Index.cshtml" />
+    <Content Include="Views\Portugal\Index.cshtml" />
+    <Content Include="Views\Austria\Index.cshtml" />
+    <Content Include="Views\Serbia\Index.cshtml" />
+    <Content Include="Views\Lithuania\Index.cshtml" />
+    <Content Include="Views\Latvia\Index.cshtml" />
+    <Content Include="Views\Croatia\Index.cshtml" />
+    <Content Include="Views\Slovakia\Index.cshtml" />
+    <Content Include="Views\Denmark\Index.cshtml" />
+    <Content Include="Views\Switzerland\Index.cshtml" />
+    <Content Include="Views\Netherlands\Index.cshtml" />
+    <Content Include="Views\Moldova\Index.cshtml" />
+    <Content Include="Views\Belgium\Index.cshtml" />
+    <Content Include="Views\Armenia\Index.cshtml" />
+    <Content Include="Views\Turkey\Index.cshtml" />
+    <Content Include="Views\Slovenia\Index.cshtml" />
+    <Content Include="Views\Montenegro\Index.cshtml" />
+    <Content Include="Views\Kosovo\Index.cshtml" />
+    <Content Include="Views\Azerbaijan\Index.cshtml" />
+    <Content Include="Views\Cyprus\Index.cshtml" />
+    <Content Include="Views\Luxembourg\Index.cshtml" />
+    <Content Include="Views\Andorra\Index.cshtml" />
+    <Content Include="Views\Malta\Index.cshtml" />
+    <Content Include="Views\Liechtenstein\Index.cshtml" />
+    <Content Include="Views\England\Index.cshtml" />
+    <Content Include="Views\Scotland\Index.cshtml" />
+    <Content Include="Views\Wales\Index.cshtml" />
+    <Content Include="Views\Northern_Ireland\Index.cshtml" />
+    <Content Include="Views\Czech_Republic\Index.cshtml" />
+    <Content Include="Views\Bosnia_and_Herzegovina\Index.cshtml" />
+    <Content Include="Views\North_Macedonia\Index.cshtml" />
+    <Content Include="Views\San_Marino\Index.cshtml" />
+    <Content Include="Views\Albania\Index.cshtml" />
+    <Content Include="Views\Albania\AlbanianMains.cshtml" />
+    <Content Include="Views\Albania\AlbanianStarters.cshtml" />
+    <Content Include="Views\Albania\AlbanianDesserts.cshtml" />
+    <Content Include="Views\Shared\_AboutRecipes.cshtml" />
+    <Content Include="Views\Shared\_Recipes.cshtml" />
+    <Content Include="Views\Andorra\AndorranStarters.cshtml" />
+    <Content Include="Views\Andorra\AndorranMains.cshtml" />
+    <Content Include="Views\Andorra\AndorranDesserts.cshtml" />
+    <Content Include="Views\Armenia\ArmenianStarters.cshtml" />
+    <Content Include="Views\Armenia\ArmenianMains.cshtml" />
+    <Content Include="Views\Armenia\ArmenianDesserts.cshtml" />
+    <Content Include="Views\Austria\AustrianStarters.cshtml" />
+    <Content Include="Views\Austria\AustrianMains.cshtml" />
+    <Content Include="Views\Austria\AustrianDesserts.cshtml" />
+    <Content Include="Views\Azerbaijan\AzerbaijaniStarters.cshtml" />
+    <Content Include="Views\Azerbaijan\AzerbaijaniMains.cshtml" />
+    <Content Include="Views\Azerbaijan\AzerbaijaniDesserts.cshtml" />
+    <Content Include="Views\Belarus\BelorussianStarters.cshtml" />
+    <Content Include="Views\Belarus\BelorussianMains.cshtml" />
+    <Content Include="Views\Belarus\BelorussianDesserts.cshtml" />
+    <Content Include="Views\Belgium\BelgianStarters.cshtml" />
+    <Content Include="Views\Belgium\BelgianMains.cshtml" />
+    <Content Include="Views\Belgium\BelgianDesserts.cshtml" />
+    <Content Include="Views\Bosnia_and_Herzegovina\BosnianStarters.cshtml" />
+    <Content Include="Views\Bosnia_and_Herzegovina\BosnianMains.cshtml" />
+    <Content Include="Views\Bosnia_and_Herzegovina\BosnianDesserts.cshtml" />
+    <Content Include="Views\Bulgaria\BulgarianStarters.cshtml" />
+    <Content Include="Views\Bulgaria\BulgarianMains.cshtml" />
+    <Content Include="Views\Bulgaria\BulgarianDesserts.cshtml" />
+    <Content Include="Views\Croatia\CroatianStarters.cshtml" />
+    <Content Include="Views\Croatia\CroatianMains.cshtml" />
+    <Content Include="Views\Croatia\CroatianDesserts.cshtml" />
+    <Content Include="Views\Cyprus\CypriotStarters.cshtml" />
+    <Content Include="Views\Cyprus\CypriotMains.cshtml" />
+    <Content Include="Views\Cyprus\CypriotDesserts.cshtml" />
+    <Content Include="Views\Czech_Republic\CzechStarters.cshtml" />
+    <Content Include="Views\Czech_Republic\CzechMains.cshtml" />
+    <Content Include="Views\Czech_Republic\CzechDesserts.cshtml" />
+    <Content Include="Views\Denmark\DanishStarters.cshtml" />
+    <Content Include="Views\Denmark\DanishMains.cshtml" />
+    <Content Include="Views\Denmark\DanishDesserts.cshtml" />
+    <Content Include="Views\England\EnglishStarters.cshtml" />
+    <Content Include="Views\England\EnglishMains.cshtml" />
+    <Content Include="Views\England\EnglishDesserts.cshtml" />
+    <Content Include="Views\Estonia\EstonianStarters.cshtml" />
+    <Content Include="Views\Estonia\EstonianMains.cshtml" />
+    <Content Include="Views\Estonia\EstonianDesserts.cshtml" />
+    <Content Include="Views\Finland\FinnishStarters.cshtml" />
+    <Content Include="Views\Finland\FinnishMains.cshtml" />
+    <Content Include="Views\Finland\FinnishDesserts.cshtml" />
+    <Content Include="Views\France\FrenchStarters.cshtml" />
+    <Content Include="Views\France\FrenchMains.cshtml" />
+    <Content Include="Views\France\FrenchDesserts.cshtml" />
+    <Content Include="Views\Georgia\GeorgianStarters.cshtml" />
+    <Content Include="Views\Georgia\GeorgianMains.cshtml" />
+    <Content Include="Views\Georgia\GeorgianDesserts.cshtml" />
+    <Content Include="Views\Germany\GermanStarters.cshtml" />
+    <Content Include="Views\Germany\GermanMains.cshtml" />
+    <Content Include="Views\Germany\GermanDesserts.cshtml" />
+    <Content Include="Views\Greece\GreekStarters.cshtml" />
+    <Content Include="Views\Greece\GreekMains.cshtml" />
+    <Content Include="Views\Greece\GreekDesserts.cshtml" />
+    <Content Include="Views\Hungary\HungarianStarters.cshtml" />
+    <Content Include="Views\Hungary\HungarianMains.cshtml" />
+    <Content Include="Views\Hungary\HungarianDesserts.cshtml" />
+    <Content Include="Views\Iceland\IcelandicStarters.cshtml" />
+    <Content Include="Views\Iceland\IcelandicMains.cshtml" />
+    <Content Include="Views\Iceland\IcelandicDesserts.cshtml" />
+    <Content Include="Views\Ireland\IrishStarters.cshtml" />
+    <Content Include="Views\Ireland\IrishMains.cshtml" />
+    <Content Include="Views\Ireland\IrishDesserts.cshtml" />
+    <Content Include="Views\Italy\ItalianStarters.cshtml" />
+    <Content Include="Views\Italy\ItalianMains.cshtml" />
+    <Content Include="Views\Italy\ItalianDesserts.cshtml" />
+    <Content Include="Views\Kazakhstan\KazakhStarters.cshtml" />
+    <Content Include="Views\Kazakhstan\KazakhMains.cshtml" />
+    <Content Include="Views\Kazakhstan\KazakhDesserts.cshtml" />
+    <Content Include="Views\Kosovo\KosovanStarters.cshtml" />
+    <Content Include="Views\Kosovo\KosovanMains.cshtml" />
+    <Content Include="Views\Kosovo\KosovanDesserts.cshtml" />
+    <Content Include="Views\Latvia\LatvianStarters.cshtml" />
+    <Content Include="Views\Latvia\LatvianMains.cshtml" />
+    <Content Include="Views\Latvia\LatvianDesserts.cshtml" />
+    <Content Include="Views\Liechtenstein\LiechtensteinerStarters.cshtml" />
+    <Content Include="Views\Liechtenstein\LiechtensteinerMains.cshtml" />
+    <Content Include="Views\Liechtenstein\LiechtensteinerDesserts.cshtml" />
+    <Content Include="Views\Lithuania\LithuanianStarters.cshtml" />
+    <Content Include="Views\Lithuania\LithuanianMains.cshtml" />
+    <Content Include="Views\Lithuania\LithuanianDesserts.cshtml" />
+    <Content Include="Views\Luxembourg\LetzebuergeschStarters.cshtml" />
+    <Content Include="Views\Luxembourg\LetzebuergeschMains.cshtml" />
+    <Content Include="Views\Luxembourg\LetzebuergeschDesserts.cshtml" />
+    <Content Include="Views\Malta\MalteseStarters.cshtml" />
+    <Content Include="Views\Malta\MalteseMains.cshtml" />
+    <Content Include="Views\Malta\MalteseDesserts.cshtml" />
+    <Content Include="Views\Moldova\MoldovanStarters.cshtml" />
+    <Content Include="Views\Moldova\MoldovanMains.cshtml" />
+    <Content Include="Views\Moldova\MoldovanDesserts.cshtml" />
+    <Content Include="Views\Montenegro\MontenegrinStarters.cshtml" />
+    <Content Include="Views\Montenegro\MontenegrinMains.cshtml" />
+    <Content Include="Views\Montenegro\MontenegrinDesserts.cshtml" />
+    <Content Include="Views\Netherlands\DutchStarters.cshtml" />
+    <Content Include="Views\Netherlands\DutchMains.cshtml" />
+    <Content Include="Views\Netherlands\DutchDesserts.cshtml" />
+    <Content Include="Views\North_Macedonia\NorthMacedonianStarters.cshtml" />
+    <Content Include="Views\North_Macedonia\NorthMacedonianMains.cshtml" />
+    <Content Include="Views\North_Macedonia\NorthMacedonianDesserts.cshtml" />
+    <Content Include="Views\Northern_Ireland\NorthernIrishStarters.cshtml" />
+    <Content Include="Views\Northern_Ireland\NorthernIrishMains.cshtml" />
+    <Content Include="Views\Northern_Ireland\NorthernIrishDesserts.cshtml" />
+    <Content Include="Views\Norway\NorwegianStarters.cshtml" />
+    <Content Include="Views\Norway\NorwegianMains.cshtml" />
+    <Content Include="Views\Norway\NorwegianDesserts.cshtml" />
+    <Content Include="Views\Poland\PolishStarters.cshtml" />
+    <Content Include="Views\Poland\PolishMains.cshtml" />
+    <Content Include="Views\Poland\PolishDesserts.cshtml" />
+    <Content Include="Views\Portugal\PortugueseStarters.cshtml" />
+    <Content Include="Views\Portugal\PortugueseMains.cshtml" />
+    <Content Include="Views\Portugal\PortugueseDesserts.cshtml" />
+    <Content Include="Views\Romania\RomanianStarters.cshtml" />
+    <Content Include="Views\Romania\RomanianMains.cshtml" />
+    <Content Include="Views\Romania\RomanianDesserts.cshtml" />
+    <Content Include="Views\Russia\RussianStarters.cshtml" />
+    <Content Include="Views\Russia\RussianMains.cshtml" />
+    <Content Include="Views\Russia\RussianDesserts.cshtml" />
+    <Content Include="Views\San_Marino\SammarineseStarters.cshtml" />
+    <Content Include="Views\San_Marino\SammarineseMains.cshtml" />
+    <Content Include="Views\San_Marino\SammarineseDesserts.cshtml" />
+    <Content Include="Views\Scotland\ScottishStarters.cshtml" />
+    <Content Include="Views\Scotland\ScottishMains.cshtml" />
+    <Content Include="Views\Scotland\ScottishDesserts.cshtml" />
+    <Content Include="Views\Slovakia\SlovakStarters.cshtml" />
+    <Content Include="Views\Slovakia\SlovakMains.cshtml" />
+    <Content Include="Views\Slovakia\SlovakDesserts.cshtml" />
+    <Content Include="Views\Slovenia\SlovenianStarters.cshtml" />
+    <Content Include="Views\Slovenia\SlovenianMains.cshtml" />
+    <Content Include="Views\Slovenia\SlovenianDesserts.cshtml" />
+    <Content Include="Views\Spain\SpanishStarters.cshtml" />
+    <Content Include="Views\Spain\SpanishMains.cshtml" />
+    <Content Include="Views\Spain\SpanishDesserts.cshtml" />
+    <Content Include="Views\Sweden\SwedishStarters.cshtml" />
+    <Content Include="Views\Sweden\SwedishMains.cshtml" />
+    <Content Include="Views\Sweden\SwedishDesserts.cshtml" />
+    <Content Include="Views\Switzerland\SwissStarters.cshtml" />
+    <Content Include="Views\Switzerland\SwissMains.cshtml" />
+    <Content Include="Views\Switzerland\SwissDesserts.cshtml" />
+    <Content Include="Views\Turkey\TurkishStarters.cshtml" />
+    <Content Include="Views\Turkey\TurkishMains.cshtml" />
+    <Content Include="Views\Turkey\TurkishDesserts.cshtml" />
+    <Content Include="Views\Ukraine\UkrainianStarters.cshtml" />
+    <Content Include="Views\Ukraine\UkrainianMains.cshtml" />
+    <Content Include="Views\Ukraine\UkrainianDesserts.cshtml" />
+    <Content Include="Views\Wales\WelshStarters.cshtml" />
+    <Content Include="Views\Wales\WelshMains.cshtml" />
+    <Content Include="Views\Wales\WelshDesserts.cshtml" />
+    <Content Include="Views\Serbia\SerbianStarters.cshtml" />
+    <Content Include="Views\Serbia\SerbianMains.cshtml" />
+    <Content Include="Views\Serbia\SerbianDesserts.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\Andorra\Desserts\" />
+    <Folder Include="Images\Armenia\Desserts\" />
+    <Folder Include="Images\Armenia\Mains\" />
+    <Folder Include="Images\Armenia\Starters\" />
+    <Folder Include="Images\Austria\Desserts\" />
+    <Folder Include="Images\Austria\Mains\" />
+    <Folder Include="Images\Austria\Starters\" />
+    <Folder Include="Images\Azerbaijan\Desserts\" />
+    <Folder Include="Images\Azerbaijan\Mains\" />
+    <Folder Include="Images\Azerbaijan\Starters\" />
+    <Folder Include="Images\Belarus\Desserts\" />
+    <Folder Include="Images\Belarus\Mains\" />
+    <Folder Include="Images\Belarus\Starters\" />
+    <Folder Include="Images\Belgium\Desserts\" />
+    <Folder Include="Images\Belgium\Mains\" />
+    <Folder Include="Images\Belgium\Starters\" />
+    <Folder Include="Images\Bosnia and Herzegovina\Desserts\" />
+    <Folder Include="Images\Bosnia and Herzegovina\Mains\" />
+    <Folder Include="Images\Bosnia and Herzegovina\Starters\" />
+    <Folder Include="Images\Bulgaria\Desserts\" />
+    <Folder Include="Images\Bulgaria\Mains\" />
+    <Folder Include="Images\Bulgaria\Starters\" />
+    <Folder Include="Images\Croatia\Desserts\" />
+    <Folder Include="Images\Croatia\Mains\" />
+    <Folder Include="Images\Croatia\Starters\" />
+    <Folder Include="Images\Cyprus\Desserts\" />
+    <Folder Include="Images\Cyprus\Mains\" />
+    <Folder Include="Images\Cyprus\Starters\" />
+    <Folder Include="Images\Czech Republic\Desserts\" />
+    <Folder Include="Images\Czech Republic\Mains\" />
+    <Folder Include="Images\Czech Republic\Starters\" />
+    <Folder Include="Images\Denmark\Desserts\" />
+    <Folder Include="Images\Denmark\Mains\" />
+    <Folder Include="Images\Denmark\Starters\" />
+    <Folder Include="Images\England\Desserts\" />
+    <Folder Include="Images\England\Mains\" />
+    <Folder Include="Images\England\Starters\" />
+    <Folder Include="Images\Estonia\Desserts\" />
+    <Folder Include="Images\Estonia\Mains\" />
+    <Folder Include="Images\Estonia\Starters\" />
+    <Folder Include="Images\Finland\Desserts\" />
+    <Folder Include="Images\Finland\Mains\" />
+    <Folder Include="Images\Finland\Starters\" />
+    <Folder Include="Images\France\Desserts\" />
+    <Folder Include="Images\France\Mains\" />
+    <Folder Include="Images\France\Starters\" />
+    <Folder Include="Images\Georgia\Desserts\" />
+    <Folder Include="Images\Georgia\Mains\" />
+    <Folder Include="Images\Georgia\Starters\" />
+    <Folder Include="Images\Germany\Desserts\" />
+    <Folder Include="Images\Germany\Mains\" />
+    <Folder Include="Images\Germany\Starters\" />
+    <Folder Include="Images\Greece\Desserts\" />
+    <Folder Include="Images\Greece\Mains\" />
+    <Folder Include="Images\Greece\Starters\" />
+    <Folder Include="Images\Hungary\Desserts\" />
+    <Folder Include="Images\Hungary\Mains\" />
+    <Folder Include="Images\Hungary\Starters\" />
+    <Folder Include="Images\Iceland\Desserts\" />
+    <Folder Include="Images\Iceland\Mains\" />
+    <Folder Include="Images\Iceland\Starters\" />
+    <Folder Include="Images\Ireland\Desserts\" />
+    <Folder Include="Images\Ireland\Mains\" />
+    <Folder Include="Images\Ireland\Starters\" />
+    <Folder Include="Images\Italy\Desserts\" />
+    <Folder Include="Images\Italy\Mains\" />
+    <Folder Include="Images\Italy\Starters\" />
+    <Folder Include="Images\Kazakhstan\Desserts\" />
+    <Folder Include="Images\Kazakhstan\Mains\" />
+    <Folder Include="Images\Kazakhstan\Starters\" />
+    <Folder Include="Images\Kosovo\Desserts\" />
+    <Folder Include="Images\Kosovo\Mains\" />
+    <Folder Include="Images\Kosovo\Starters\" />
+    <Folder Include="Images\Latvia\Desserts\" />
+    <Folder Include="Images\Latvia\Mains\" />
+    <Folder Include="Images\Latvia\Starters\" />
+    <Folder Include="Images\Liechtenstein\Desserts\" />
+    <Folder Include="Images\Liechtenstein\Mains\" />
+    <Folder Include="Images\Liechtenstein\Starters\" />
+    <Folder Include="Images\Lithuania\Desserts\" />
+    <Folder Include="Images\Lithuania\Mains\" />
+    <Folder Include="Images\Lithuania\Starters\" />
+    <Folder Include="Images\Luxembourg\Desserts\" />
+    <Folder Include="Images\Luxembourg\Mains\" />
+    <Folder Include="Images\Luxembourg\Starters\" />
+    <Folder Include="Images\Malta\Desserts\" />
+    <Folder Include="Images\Malta\Mains\" />
+    <Folder Include="Images\Malta\Starters\" />
+    <Folder Include="Images\Moldova\Desserts\" />
+    <Folder Include="Images\Moldova\Mains\" />
+    <Folder Include="Images\Moldova\Starters\" />
+    <Folder Include="Images\Montenegro\Desserts\" />
+    <Folder Include="Images\Montenegro\Mains\" />
+    <Folder Include="Images\Montenegro\Starters\" />
+    <Folder Include="Images\Netherlands\Desserts\" />
+    <Folder Include="Images\Netherlands\Mains\" />
+    <Folder Include="Images\Netherlands\Starters\" />
+    <Folder Include="Images\North Macedonia\Desserts\" />
+    <Folder Include="Images\North Macedonia\Mains\" />
+    <Folder Include="Images\North Macedonia\Starters\" />
+    <Folder Include="Images\Northern Ireland\Desserts\" />
+    <Folder Include="Images\Northern Ireland\Mains\" />
+    <Folder Include="Images\Northern Ireland\Starters\" />
+    <Folder Include="Images\Norway\Desserts\" />
+    <Folder Include="Images\Norway\Mains\" />
+    <Folder Include="Images\Norway\Starters\" />
+    <Folder Include="Images\Poland\Desserts\" />
+    <Folder Include="Images\Poland\Mains\" />
+    <Folder Include="Images\Poland\Starters\" />
+    <Folder Include="Images\Portugal\Desserts\" />
+    <Folder Include="Images\Portugal\Mains\" />
+    <Folder Include="Images\Portugal\Starters\" />
+    <Folder Include="Images\Romania\Desserts\" />
+    <Folder Include="Images\Romania\Mains\" />
+    <Folder Include="Images\Romania\Starters\" />
+    <Folder Include="Images\Russia\Desserts\" />
+    <Folder Include="Images\Russia\Mains\" />
+    <Folder Include="Images\Russia\Starters\" />
+    <Folder Include="Images\San Marino\Desserts\" />
+    <Folder Include="Images\San Marino\Mains\" />
+    <Folder Include="Images\San Marino\Starters\" />
+    <Folder Include="Images\Scotland\Desserts\" />
+    <Folder Include="Images\Scotland\Mains\" />
+    <Folder Include="Images\Scotland\Starters\" />
+    <Folder Include="Images\Serbia\Desserts\" />
+    <Folder Include="Images\Serbia\Mains\" />
+    <Folder Include="Images\Serbia\Starters\" />
+    <Folder Include="Images\Slovakia\Desserts\" />
+    <Folder Include="Images\Slovakia\Mains\" />
+    <Folder Include="Images\Slovakia\Starters\" />
+    <Folder Include="Images\Slovenia\Desserts\" />
+    <Folder Include="Images\Slovenia\Mains\" />
+    <Folder Include="Images\Slovenia\Starters\" />
+    <Folder Include="Images\Spain\Desserts\" />
+    <Folder Include="Images\Spain\Mains\" />
+    <Folder Include="Images\Spain\Starters\" />
+    <Folder Include="Images\Sweden\Desserts\" />
+    <Folder Include="Images\Sweden\Mains\" />
+    <Folder Include="Images\Sweden\Starters\" />
+    <Folder Include="Images\Switzerland\Desserts\" />
+    <Folder Include="Images\Switzerland\Mains\" />
+    <Folder Include="Images\Switzerland\Starters\" />
+    <Folder Include="Images\Turkey\Desserts\" />
+    <Folder Include="Images\Turkey\Mains\" />
+    <Folder Include="Images\Turkey\Starters\" />
+    <Folder Include="Images\Ukraine\Desserts\" />
+    <Folder Include="Images\Ukraine\Mains\" />
+    <Folder Include="Images\Ukraine\Starters\" />
+    <Folder Include="Images\Wales\Desserts\" />
+    <Folder Include="Images\Wales\Mains\" />
+    <Folder Include="Images\Wales\Starters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50025</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44335/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

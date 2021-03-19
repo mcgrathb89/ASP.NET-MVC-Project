@@ -1,0 +1,7 @@
+﻿.btn-group a {
+    color: lightgray !important;
+}
+
+.btn-group a:hover {
+    text-decoration: underline !important;
+}

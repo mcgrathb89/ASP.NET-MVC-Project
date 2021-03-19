@@ -1,0 +1,64 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Lithuania";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center"><strong>Welcome to Lithuania</strong></h1>
+<br />
+
+<div class="text-left"><h2>Recipe Navigation</h2></div>
+<br />
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Countries", "CountriesList", "Countries")</li>
+    <li class="active">About Lithuanian Food</li>
+    <li>@Html.ActionLink("Lithuanian Starters", "LithuanianStarters", "Lithuania")</li>
+    <li>@Html.ActionLink("Lithuanian Mains", "LithuanianMains", "Lithuania")</li>
+    <li>@Html.ActionLink("Lithuanian Desserts", "LithuanianDesserts", "Lithuania")</li>
+</ul>
+
+<div class="smaller-space"></div>
+
+<img class="img-responsive center-block" src="~/Images/Lithuania/Flag_of_Lithuania.webp" alt="Lithuanian Flag" />
+
+<div class="smaller-space"></div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="text-left"><h1 class="panel-title lead">About Lithuanian Cuisine</h1></div>
+    </div>
+    <div class="panel-body text-justify lead">
+
+    </div>
+</div>
+
+<div class="space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About Lithuanian Starters</h2>
+    <br />
+    <p class="text-justify">
+
+    </p>
+</div>
+
+<div class="small-space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About Lithuanian Mains</h2>
+    <br />
+    <p class="text-justify">
+
+    </p>
+</div>
+
+<div class="small-space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About Lithuanian Desserts</h2>
+    <br />
+    <p class="text-justify">
+
+    </p>
+</div>

@@ -1,0 +1,65 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Bulgaria";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center"><strong>Welcome to Bulgaria</strong></h1>
+<br />
+
+<div class="text-left"><h2>Recipe Navigation</h2></div>
+<br />
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Countries", "CountriesList", "Countries")</li>
+    <li class="active">About Bulgarian Food</li>
+    <li>@Html.ActionLink("Bulgarian Starters", "BulgarianStarters", "Bulgaria")</li>
+    <li>@Html.ActionLink("Bulgarian Mains", "BulgarianMains", "Bulgaria")</li>
+    <li>@Html.ActionLink("Bulgarian Desserts", "BulgarianDesserts", "Bulgaria")</li>
+</ul>
+
+<div class="smaller-space"></div>
+
+<img class="img-responsive center-block" src="~/Images/Bulgaria/Flag_of_Bulgaria.webp" alt="Bulgarian Flag" />
+
+
+<div class="smaller-space"></div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="text-left"><h1 class="panel-title lead">About Bulgarian Cuisine</h1></div>
+    </div>
+    <div class="panel-body text-justify lead">
+
+    </div>
+</div>
+
+<div class="space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About Bulgarian Starters</h2>
+    <br />
+    <p class="text-justify">
+
+    </p>
+</div>
+
+<div class="small-space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About Bulgarian Mains</h2>
+    <br />
+    <p class="text-justify">
+
+    </p>
+</div>
+
+<div class="small-space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About Bulgarian Desserts</h2>
+    <br />
+    <p class="text-justify">
+
+    </p>
+</div>

@@ -1,0 +1,64 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Northern Ireland";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center"><strong>Welcome to Northern Ireland</strong></h1>
+<br />
+
+<div class="text-left"><h2>Recipe Navigation</h2></div>
+<br />
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Countries", "CountriesList", "Countries")</li>
+    <li class="active">About Northern Irish Food</li>
+    <li>@Html.ActionLink("Northern Irish Starters", "NorthernIrishStarters", "Northern_Ireland")</li>
+    <li>@Html.ActionLink("Northern Irish Mains", "NorthernIrishMains", "Northern_Ireland")</li>
+    <li>@Html.ActionLink("Northern Irish Desserts", "NorthernIrishDesserts", "Northern_Ireland")</li>
+</ul>
+
+<div class="smaller-space"></div>
+
+<img class="img-responsive center-block" src="~/Images/Northern Ireland/Flag_of_Northern_Ireland.webp" alt="Northern Irish Flag" />
+
+<div class="smaller-space"></div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="text-left"><h1 class="panel-title lead">About Northern Irish Cuisine</h1></div>
+    </div>
+    <div class="panel-body text-justify lead">
+
+    </div>
+</div>
+
+<div class="space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About Northern Irish Starters</h2>
+    <br />
+    <p class="text-justify">
+
+    </p>
+</div>
+
+<div class="small-space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About Northern Irish Mains</h2>
+    <br />
+    <p class="text-justify">
+
+    </p>
+</div>
+
+<div class="small-space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About Northern Irish Desserts</h2>
+    <br />
+    <p class="text-justify">
+
+    </p>
+</div>

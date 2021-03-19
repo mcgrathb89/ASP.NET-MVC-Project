@@ -1,0 +1,78 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Albania";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center"><strong>Welcome to Albania</strong></h1>
+<br />
+
+<div class="text-left"><h2>Recipe Navigation</h2></div>
+<br />
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Countries", "CountriesList", "Countries")</li>
+    <li class="active">About Albanian Food</li>
+    <li>@Html.ActionLink("Albanian Starters", "AlbanianStarters", "Albania")</li>
+    <li>@Html.ActionLink("Albanian Mains", "AlbanianMains", "Albania")</li>
+    <li>@Html.ActionLink("Albanian Desserts", "AlbanianDesserts", "Albania")</li>
+</ul>
+
+<div class="smaller-space"></div>
+
+<img class="img-responsive center-block" src="~/Images/Albania/Flag_of_Albania.webp" alt="Albanian Flag" />
+
+<div class="smaller-space"></div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="text-left"><h1 class="panel-title lead">About Albanian Cuisine</h1></div>
+    </div>
+    <div class="panel-body text-justify lead">
+        Albanian food is typically described as a Mediterranean style of food due to its geographical proximity to places like Greece and Italy, however there are also Turkish, Balkan and Russian influences in Albanian food due to historical diaspora from these regions too.
+        <br /><br />
+        Due to its climate Albania is suitable for growing a diverse range of herbs and fruits which feature prominently in it's cooking along with staple vegetables such as potatoes and onions, in fact Albanians are ranked fourth in the world for their onion consumption so expect to see many onion based dishes in these recipes!
+    </div>
+</div>
+
+<div class="space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About Albanian Starters</h2>
+    <br />
+    <p class="text-justify">
+        From fried cheese to baked cheese, cheese salad to cheese pies, ordering cheese as a starter is very common in Albania.
+        <br /><br />
+        But of course there are also many pastry based dishes which are common on the streets and in the restaurants of Albania. Fruits and nuts are also commonly served alongside these pastry dishes such as figs, dates and walnuts along with preserves such as honey and jam too. <br /><br />
+        Drinks such as Albanian mountain tea and Turkish style coffees are also popular to consume with starters, although its not uncommon to enjoy an alcoholic beverage called Raki with your starter which is a grape and aniseed flavoured spirit with an alcohol content of 40-50%, so its advisable to go easy on this one!
+    </p>
+</div>
+
+<div class="small-space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About Albanian Mains</h2>
+    <br />
+    <p class="text-justify">
+        Of all the most popular dishes in Albania's it would surely be its national dish known as Fërgesë Tirane, this is a baked vegetable and cheese dish which originates from its capital Tirana.
+        <br /> <br />
+        Many of the mains served in Albania consist of beef, pork, chicken and veal, although the Ionian coastal towns of Albania have a preference for cooking with seafood due to its location next to the Mediterranean Sea and thus there are dishes in these areas with an abundance of fish, crab and prawn dishes.
+        <br /><br />
+        That being said seafood has also become more popular throughout Albania in recent times due to the ease of transporting seafood in a fresher state with better food transportation and preservation technologies becoming more common in this region.
+    </p>
+</div>
+
+<div class="small-space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About Albanian Desserts</h2>
+    <br />
+    <p class="text-justify">
+        The most common dessert in Albania is Baklava, this is a layered dish made of filo pastry which is filled with chopped nuts, and soaked in a sugar syrup or honey,  it is then sliced into small squares to share or have on its own, it somewhat resembles a sweet version of lasagna in many ways (minus the pasta and meat of course!).
+        <br /><br />
+        Baklava can be found at both the family dinner table and in restaurants, but its also common to find Baklava as a popular coffee house style snack to go along with a warm beverage.
+        <br /><br />
+        The actual origin of Baklava is disputed with several countries such as Turkey, Bulgaria, Greece, Iran and Cyprus laying claim to this popular confection along with Albania, but it is commonly assumed that Baklava was invented sometime prior to the 19th century in Topkapı Palace in Istanbul, Turkey.
+        <br /><br />
+    </p>
+</div>

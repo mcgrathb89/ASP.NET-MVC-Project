@@ -1,0 +1,36 @@
+﻿a {
+    color: white;
+}
+
+    a:hover {
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.smaller-space {
+    margin-top: 50px;
+}
+
+.small-space {
+    margin-top: 130px;
+}
+
+.space {
+    margin-top: 120px;
+}
+
+html {
+    font-size: 1rem;
+}
+
+@media (max-width: 990px) {
+    .move-text-to-center {
+        text-align: center;
+    }
+}

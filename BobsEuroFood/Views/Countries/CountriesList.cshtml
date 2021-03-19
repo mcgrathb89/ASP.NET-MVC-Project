@@ -1,0 +1,31 @@
+﻿@model BobsEuroFood.ViewModels.CountryViewModel
+
+@{
+    ViewBag.Title = "Countries";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center">Welcome to Bob's European Food</h1>
+<br />
+<br />
+<br />
+<br />
+
+<img class="img-responsive center-block" src="~/Images/Flag_of_Europe.webp" alt="European Flag" />
+
+<br />
+<br />
+<br />
+<br />
+<h1 class="text-center">Choose a Country</h1>
+<br />
+<hr />
+<br />
+
+@foreach (var country in Model.Countries)
+{
+<div class="btn-group" role="group" style="padding-bottom: 1ch; padding-left: 1ch;">
+    [@Html.ActionLink(@country.Name.Replace("_", " "), "Index", @country.Name)]
+    <br /> <br /> <br />
+</div>
+}

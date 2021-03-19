@@ -1,0 +1,80 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Andorra";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center"><strong>Welcome to Andorra</strong></h1>
+<br />
+
+<div class="text-left"><h2>Recipe Navigation</h2></div>
+<br />
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Countries", "CountriesList", "Countries")</li>
+    <li class="active">About Andorran Food</li>
+    <li>@Html.ActionLink("Andorran Starters", "AndorranStarters", "Andorra")</li>
+    <li>@Html.ActionLink("Andorran Mains", "AndorranMains", "Andorra")</li>
+    <li>@Html.ActionLink("Andorran Desserts", "AndorranDesserts", "Andorra")</li>
+</ul>
+
+<div class="smaller-space"></div>
+
+<img class="img-responsive center-block" src="~/Images/Andorra/Flag_of_Andorra.webp" alt="Andorran Flag" />
+
+<div class="smaller-space"></div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="text-left"><h1 class="panel-title lead">About Andorran Cuisine</h1></div>
+    </div>
+    <div class="panel-body text-justify lead">
+        Because Andorra sits between Spain, Catalonia and France its cuisine is heavily influenced by its neighboring countries, Andorrans enjoy a wide variety of meats such as as chicken, veal and beef...even pig snout and trotters are on the menu in Andorra!
+        <br /><br />
+        Andorran food is also classified as Mediterranean cuisine and therefore uses ingredients popular along the Mediterranean coast such as vegetables, wheat products, olive oils, wines, legumes, mushrooms, nuts, meats and many different types of fish too.
+        <br /><br />
+        Andorrans speak Catalan as their primary language and thus its culture and heritage is steeped in Catalan influences, Catalan and Andorran cuisine are often used interchangeably when being described as they are essentially the same thing, however Andorra differs from Catalonia through the fact it was also occupied by the French which is why there is a big influence in french ingredients and techniques in the Andorran kitchen too.
+    </div>
+</div>
+
+<div class="small-space"></div>
+
+<div class="space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About Andorran Starters</h2>
+    <br />
+    <p class="text-justify">
+        In Andorran cuisine, starters play an essential role in Andorran culture due to the tradition of sitting around a table and sharing with family and friends which is a popular past-time in this small mountainous country.
+        <br /><br />
+        Vegetables, legumes, mediterranean oils, fish are all combined to get the most delicious entrees to start a meal and are often paired with ood quality Spanish wines to compliment the flavours. Also, having Spain so close by it is also not uncommon to see tapas type small bites in restaurants too.
+        <br /><br />
+        Sometimes something as simple as a rustic bread dipped in olive oil with a little salt is required to get the taste buds ready for the wealth of food that Andorra has to offer.
+    </p>
+</div>
+
+<div class="small-space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About Andorran Mains</h2>
+    <br />
+    <p class="text-justify">
+        The most popular dish in Andorra is Escudella and is often referred to as Andorra's national dish. It is typically eaten in winter and on holy days, including at Christmas. It is a big hearty stew, and a particular favourite with meat-lovers. It contains ingredients such as chicken, veal, meatballs, pig snout and trotters (see told you!) and butifarra sausage (a cured sausage similar to chorizo) too.
+        <br /><br />
+        Due to the fact that its culture is so engrained into that of Catalan culture it is also likely you will see Cargols a la llauna on the menu, what is Cargols a la llauna I hear you ask...well its grilled sails served with a garlic mayonnaise which itself takes inspiration from the french dish of Escargots à la Bourguignonne.
+    </p>
+</div>
+
+<div class="small-space"></div>
+
+<div class="jumbotron">
+    <h2 class="text-center">About Andorran Desserts</h2>
+    <br />
+    <p class="text-justify">
+        Andorran sweet treats borrow heavily of the desserts of Spain, Catalonia and France with creme catalana found to be a popular dessert in Andorra.
+        <br /><br />
+        Creme catalana is a very old traditional dessert to the region of Catalonia and thus is also popular in Andorra too. In many ways creme catalana resembles the French dessert of crème brûlée with the main ingredients being eggs and milk.
+        <br /><br />
+        However, unlike a crème brûlée, it is not baked but instead left to set and it is flavoured with cinnamon and lemon peel, not with vanilla like the French version. The one similarity it does share with the French version however is that it is finished off with a crust of caramelized sugar so the inspiration of this dish has itself been passed through via France to the people of Catalonia and then through to the people of Andorra due to its close geographical proximity and history with both of these places.
+    </p>
+</div>
